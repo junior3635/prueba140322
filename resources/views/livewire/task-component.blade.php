@@ -1,6 +1,9 @@
 <div class="row">
     <div class="col-md-3">
         <div class="form-group">
+            <H2>Nueva Task</H2>
+        </div>
+        <div class="form-group">
             <label for="">Titulo</label>
             <input class="form-control" type="text" name="title" wire:model="title">
             @error('title') <span>{{$message}}</span> @enderror

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\TasksController;
 
 /*
@@ -17,13 +18,10 @@ use App\Http\Controllers\TasksController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/test', [TestController::class, 'test'])->name('test');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 Route::middleware(['auth:sanctum', 'verified'])->get('/tasks', [TasksController::class, 'index'])->name('tasks');
-
-// Route::middleware(['auth:sanctum', 'verified'])->name('tasks')->resource('/tasks', TasksController::class)->only([
-//     'index', 'show' , 'create', 'store', 'update', 'destroy'
-// ]);
 

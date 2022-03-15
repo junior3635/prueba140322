@@ -13,8 +13,9 @@ class TestController extends Controller
         $d3 =Product::create([
             'invoice_id' => 1,
             'name' => Str::random(8),
-            'quantity' => 8,
-            'price' => 1,
+            'quantity' => 3,
+            'price' => 10,
             ])->get('name');
+        echo 'Producto Ingresado Exitosamente';
     }
 }
