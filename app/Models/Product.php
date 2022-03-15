@@ -5,13 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Log extends Model
+class Product extends Model
 {
     use HasFactory;
-    protected $table = 'logs';
-    protected $fillable = [
-        'accion',
-        'comentario',
-        'task_id'
-    ];
+
+    protected $fillable = ['invoice_id', 'name', 'quantity', 'price'];
 }
